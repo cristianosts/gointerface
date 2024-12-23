@@ -9,8 +9,8 @@
 
 body {
     background-color: black;
-    color: white;
-    font-family: 'Pixelify Sans';
+    color: rgb(0, 0, 199);
+    font-family: 'Pixelify Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
     overflow: hidden;
 }
@@ -30,19 +30,26 @@ header {
     & img {
         width: 70px;
         border-radius: 50%;
+        margin: 20px;
     }
 
     & nav {
         & ul {
+            font-size: 25px;
             display: grid;
             grid-template-columns: repeat(3, 200px);
+
+              & li a:hover {
+                color: white;
+                transition: 0.5s;
+              }
         }
     }
 }
 
 
 section {
-    background-image: radial-gradient(white, rgb(0, 83, 110));
+    background-image: radial-gradient( white, rgb(0, 83, 110));
     height: 100vh;
     position: relative;
    
@@ -66,6 +73,18 @@ section {
                         width: 40%;
                         transform: rotate(-30deg);
                        }
+
+                          &::before {
+                            content: '';
+                            position: absolute;
+                            background-color: black;
+                            width: 30%;
+                            height: 100px;
+                            top: 100%;
+                            border-radius: 50%;
+                            filter: blur(50px);
+                          }
+
                    }
 
                 & .content {
@@ -81,16 +100,21 @@ section {
 
                        & .car-info {
                         font-weight: bold;
+                        font-size: 1.3em;
+                        text-align: right;
+                        width: 500px;
+                        margin-top: 100px;
                        }
 
                        & h2 {
-                        font-size: 8em;
+                        font-size: 6em;
                         line-height: 1em;
+                        padding: 70px;
                        }
 
                        & .description {
-                        color: rgb(207, 207, 207);
-                        font-size: 12px;
+                        color: rgb(0, 0, 199);
+                        font-size: 15px;
                         text-align: right;
                         max-width: 400px;
                        }
@@ -147,7 +171,8 @@ section {
          }
 
          & button:hover {
-            background-color: rgb(148, 148, 206);
+            background-color: rgb(0, 0, 199);
+            color: white;
             transform: scale(1.2) translateY(-5px);
             box-shadow: 0 0 25px white;
          }
@@ -177,7 +202,7 @@ section {
                     & li {
                         width: 50px;
                         height: 5px;
-                        background-color: white;
+                        background-color: rgb(0, 0, 199);
                         border-radius: 5px;
                         transition: 0.5s;
                     }
@@ -193,9 +218,10 @@ section {
 section {
 
     & .list {
+       
 
         & .item {
-            transform: translateX(100vw);
+            transform: translateX( 0 );
             transition: 0.5s;
             opacity: 0;
 
@@ -213,7 +239,7 @@ section {
             & .content {
                     
                  & .car-info, h2, .description, .info-btn {
-                    transform: translateX(200px);
+                    transform: translateX( 0 );
                     transition: 0.7s;
                     transition-delay: 0.3s;
                     opacity: 0;
@@ -234,7 +260,7 @@ section {
         }
 
         & .active {
-            transform: translateX(0);
+            transform: translateX(100px);
             transition: 0.5s;
             opacity: 1;
 
@@ -251,12 +277,11 @@ section {
                         & .content {
                                 
                             & .car-info, h2, .description, .info-btn {
-                            transform: translateX(0);
+                            transform: translateX( 0 );
                             opacity: 1;
-                          
                     }
-      }
-    }
-  }
-}
+           }
+        }
+    }  
+} 
 
