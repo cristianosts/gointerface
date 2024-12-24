@@ -12,7 +12,6 @@ body {
     background-color: black;
     color: rgb(0, 0, 199);
     font-family: 'Pixelify Sans', Arial, Helvetica, sans-serif;
-    font-size: 16px;
     overflow: hidden;
 }
 
@@ -28,11 +27,16 @@ header {
     z-index: 2;
 
 
-    & img {
+      & img {
         width: 70px;
         border-radius: 50%;
         margin: 20px;
-    }
+      }
+
+      & #menu-icon {
+        font-size: 3.5rem;
+        display: none;
+      }
 
     & nav {
         & ul {
@@ -78,7 +82,7 @@ section {
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    width: 70%;
+                    width:70%;
 
                        & img {
                         width: 40%;
@@ -119,13 +123,15 @@ section {
 
                        & h2 {
                         font-size: 6em;
+                        font-size: clamp(3rem, 8vw, 6vw);
                         line-height: 1em;
                         padding: 70px;
                        }
 
                        & .description {
                         color: rgb(0, 0, 199);
-                        font-size: 15px;
+                        font-size: 1.2em;
+                        font-size: clamp(1.5rem, 4vw, 3.2vw);
                         text-align: right;
                         max-width: 400px;
                        }
@@ -205,6 +211,7 @@ section {
 
             & .numbers {
                 font-size: 5em;
+                font-size: clamp(3rem, 8vw, 6vw);
             }
 
                & ul {
@@ -297,11 +304,7 @@ section {
     }  
 } 
 
-@media(max-width: 500px) {
-    #menu-icon {
-        display: block;
-    }
-
+@media(max-width: 450px) {
     body {
         width: 100vw;
     }
@@ -321,6 +324,11 @@ section {
        & img {
         margin-left: 60px;
        }
+
+       & #menu-icon {
+        margin-left: 360px;
+        display: block;
+    }
     }
 
     .navbar {
@@ -330,24 +338,88 @@ section {
         width: 60%;
         height: 9.3em;
         padding: 1rem 3rem;
-        background: white;
+        background: rgba(255, 255, 255, 0.692);
         border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
+        border-left: 2px solid;
+        border-bottom: 2px solid;
         display: none;
     }
 
     .navbar, .navul, .navli, a {
-        display: flex;
-        flex-direction: column;
         padding: 5px 10px;
         font-size: 2rem;
-        margin: 10px 0;
-        color: var(--text-color);
+        margin: 10px 5px;
     }
 
-    .navbar.active {
-        display: block;
+    & .navul, .navli, a {
+        display: flex;
+        flex-direction: column;
     }
+
+    .navbar.on {
+      display: block;
+     }
+
+    .content {
+        left: -200px;
+        bottom: -80px;
+        flex-wrap: wrap;
+        
+          & .pk-info, .description {
+            width: 50px;
+            margin-left: 170px;
+            margin-bottom: 90px;
+            display: grid;
+            align-items: center;
+            align-self: center;
+            grid-template-columns: 0.5fr 0.5fr;
+            grid-template-rows: 30px 5px;
+            grid-gap: 50px;
+          }
+
+
+          & .pk-name {
+            display: grid;
+            align-self: center;
+            margin-top: 50px;
+        
+          }
+
+          & h2, .info-btn {
+            margin-right: 180px;
+            
+          }
+
+          & .description {
+            margin-bottom: 10px;
+            margin-left: 80px;
+
+          }
+
+          & .sq, .mis, .hau, .san{
+            align-self: center;
+          }
+
+          & .info-btn {
+            align-self: center;
+            margin-bottom: 80px;
+          }
+
+
+    }
+    section .list .item {
+    & .pk-image {
+        transform: translateY(-50%);
+        width:80%;
+        margin-left: -20px;
+
+           & img {
+            width: 60%;
+            transform: rotate(-30deg);
+    }
+
+}
+
+    
 
 }

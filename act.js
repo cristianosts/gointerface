@@ -5,10 +5,18 @@ let items = container.querySelectorAll('.list .item')
 let indicator = document.querySelector('.indicators')
 let dots = indicator.querySelectorAll('ul li')
 let list = container.querySelector('.list')
+let menuIcon = document.querySelector('#menu-icon')
+let navBar = document.querySelector('.navbar')
 
 let active = 0 
 let firstP = 0
 let lastP = items.length - 1
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x')
+    navBar.classList.toggle('on')
+}
+
 
 function setSlider() {
     let itemOld = container.querySelector('.list .item.active')
