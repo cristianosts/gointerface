@@ -317,9 +317,8 @@ section {
     padding-left:;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   /* justify-content: space-between;*/
     align-items: center;
-    z-index: 1000;
 
        & img {
         margin-left: 60px;
@@ -345,17 +344,20 @@ section {
         display: none;
     }
 
-    .navbar, .navul, .navli, a {
-        padding: 5px 10px;
+    .navbar, .navul {
+        padding: 10px 10px;
         font-size: 2rem;
-        margin: 10px 5px;
+        margin: 10px 20px;
+        
+            & .navul {
+                display: flex;
+                flex-direction: column;
+                   & li {
+                    margin: 15px;
+                   }
+            }
     }
-
-    & .navul, .navli, a {
-        display: flex;
-        flex-direction: column;
-    }
-
+    
     .navbar.on {
       display: block;
      }
@@ -377,23 +379,20 @@ section {
             grid-gap: 50px;
           }
 
-
           & .pk-name {
             display: grid;
             align-self: center;
-            margin-top: 50px;
-        
+            margin-top: 10px;
+            margin-right: 60px;
           }
 
           & h2, .info-btn {
-            margin-right: 180px;
-            
+            margin-right: 180px;  
           }
 
           & .description {
-            margin-bottom: 10px;
-            margin-left: 80px;
-
+            margin-bottom: -50px;
+            margin-left: 0px;
           }
 
           & .sq, .mis, .hau, .san{
@@ -404,8 +403,6 @@ section {
             align-self: center;
             margin-bottom: 80px;
           }
-
-
     }
     section .list .item {
     & .pk-image {
@@ -417,15 +414,53 @@ section {
             width: 60%;
             transform: rotate(-30deg);
     }
+}
+}
+}
+@media screen and (max-width: 850px) {
+    .navul {
+        
+        display: flex;
+        flex-direction: row;
+
+        & a {
+           margin: 40px;
+           margin-left: -10px;
+           transition: 0.5s;
+          }
+        
+   }
+
+   header img {
+    width: 40px;
+    transition: 0.5s;
+   }
+
+   .pk-info {
+    background-color: aliceblue;
+    height: 50px;
+    padding-left: 90px;
+    margin-bottom: 100px;
+    
+   }
+
+   .content h2 {
+    margin-top: 80px; 
+    margin-bottom: -70px; 
+    margin-right: -40px;  
+   }
+   
+   section .list .item {
+    & .pk-image {
+        transform: translateY(-50%);
+        width:70%;
+        margin-left: -5px;
+
+           & img {
+            width: 60%;
+            transform: rotate(-30deg);
+    }
 
 }
-}
-}
-@media screen and (max-width: 800px) {
-      .navul a {
-        background-color: aliceblue;
-        display: flex;
-        flex-direction: column;
-        align-self: flex-start;
-   }
+   
   }
