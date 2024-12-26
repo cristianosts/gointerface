@@ -354,7 +354,7 @@ section {
             margin-right: 60px;
           }
 
-          & h2, .info-btn {
+          & h2 {
             margin-right: 180px;  
           }
 
@@ -368,7 +368,7 @@ section {
 
           & .info-btn {
             align-self: center;
-            margin-bottom: 80px;
+            margin: 0px 360px 80px 0px;
           }
     }
     section .list .item {
