@@ -337,7 +337,7 @@ section {
           & .pk-info, .description {
             width: 50px;
             margin-left: 170px;
-            padding: 0px 0px 150px 0px;
+            padding: 0px 0px 90px 0px;
             margin-bottom: 90px;
             display: grid;
             align-items: center;
@@ -358,10 +358,6 @@ section {
             margin-right: 180px;  
           }
 
-            & .pk-info {
-                
-            }
-
           & .description {
             margin: 0px 0px -100px 0px;
           }
@@ -372,7 +368,7 @@ section {
 
           & .info-btn {
             align-self: center;
-            margin: 0px 360px 80px 0px;
+            margin: 0px 375px 80px 0px;
           }
     }
     section .list .item {
