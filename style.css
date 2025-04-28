@@ -224,6 +224,7 @@ section {
                     transform: rotate(0);
                     transition: 0.5s;
                     transition-delay: 0.3s;
+                    margin-bottom: 30px;
                 }
             }
 
@@ -284,7 +285,6 @@ section {
     padding-left:;
     display: flex;
     flex-direction: column;
-   /* justify-content: space-between;*/
     align-items: center;
 
        & img {
@@ -344,7 +344,7 @@ section {
             align-self: center;
             grid-template-columns: 0.5fr 0.5fr;
             grid-template-rows: 30px 5px;
-            grid-gap: 50px;
+            grid-gap: 30px;
           }
 
           & .pk-name {
@@ -376,6 +376,7 @@ section {
         transform: translateY(-50%);
         width:80%;
         margin-left: -20px;
+        margin-top: 40px;
 
            & img {
             width: 60%;
@@ -385,6 +386,7 @@ section {
 }
 }
 @media screen and (max-width: 850px) {
+    
     .navul {
         display: flex;
         flex-direction: row;
@@ -417,7 +419,6 @@ section {
     & .pk-image {
         transform: translateY(-50%);
         width:70%;
-        margin-left: -5px;
            & img {
             width: 60%;
             transform: rotate(-30deg);
