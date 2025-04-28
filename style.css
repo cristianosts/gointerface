@@ -337,7 +337,7 @@ section {
           & .pk-info, .description {
             width: 50px;
             margin-left: 170px;
-            padding: 0px 0px 90px 0px;
+            padding: 0px 0px 100px 0px;
             margin-bottom: 90px;
             display: grid;
             align-items: center;
